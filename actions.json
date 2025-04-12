@@ -2,18 +2,40 @@
   {
     "type": "setStringValue",
     "description": "Set a string value in the cloud storage",
-    "meta": "set my data, update my data",
-    "body": {
-      "key": "string key",
-      "value": "string value"
-    }
+    "meta": "set my data, update my data, set my email, set my name, update my address, update my phone number, update my city of living",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "description": "the key of the value to be stored"
+        },
+        "value": {
+          "type": "string",
+          "description": "the value to be stored"
+        }
+      }
+    },
+    "required": ["key", "value"],
+    "strict": true,
+    "additionalProperties": false
   },
   {
     "type": "getStringValue",
     "description": "Get a string value from the cloud storage",
     "meta": "whats my, give me the, write an email, send a message",
-    "body": {
-      "key": "string key"
+    "parameters": {
+      "type": "string",
+      "description": "the key of the value to be retrieved"
+    }
+  },
+  {
+    "type": "deleteStringValue",
+    "description": "Delete a string value from the cloud storage",
+    "meta": "remove my data",
+    "parameters": {
+      "type": "string",
+      "description": "the key of the value to be deleted"
     }
   }
 ]
