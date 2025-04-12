@@ -1,0 +1,21 @@
+{
+    "name": "action-embedder",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "embed-action-keys": "node ./embed-action-keys.js",
+        "prepare-test-data": "node ./prepare-test-data.js",
+        "validate": "node ./validate.js",
+        "convert": "node ./embed-action-keys.js && node ./prepare-test-data.js && node ./validate.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^1.8.4",
+        "chalk": "^5.4.1",
+        "dotenv": "^16.4.7"
+    }
+}

@@ -1,0 +1,19 @@
+[
+  {
+    "type": "setStringValue",
+    "description": "Set a string value in the cloud storage",
+    "meta": "set my data, update my data",
+    "body": {
+      "key": "string key",
+      "value": "string value"
+    }
+  },
+  {
+    "type": "getStringValue",
+    "description": "Get a string value from the cloud storage",
+    "meta": "whats my, give me the, write an email, send a message",
+    "body": {
+      "key": "string key"
+    }
+  }
+]
