@@ -37,5 +37,38 @@
       "type": "string",
       "description": "the key of the value to be deleted"
     }
+  },
+  {
+    "type": "setEvent",
+    "description": "sets an event for user",
+    "meta": "remind me at 10:30 pm, remind me on monday morning, remind me tomorrow noon, I'm going on a vocation, I have a meeting",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "time": {
+          "type": "string",
+          "description": "the time when the event should happen in UTC format, if mentioned"
+        },
+        "name": {
+          "type": "string",
+          "description": "the name of the event"
+        },
+        "description": {
+          "type": "string",
+          "description": "a description about the event"
+        },
+        "people": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "name of people involved in the event, if mentioned"
+          }
+        },
+        "location": {
+          "type": "string",
+          "description": "place where the event is happening, if mentioned"
+        }
+      }
+    }
   }
 ]

@@ -15,7 +15,8 @@ async function embedSingleActionKey(actionKey) {
 }
 async function main() {
   console.log(chalk.yellow(`embedding action keys from ${input}...`));
-  const actionKeys = JSON.parse(fs.readFileSync("./actions.json"));
+  fs.rmSync(output);
+  const actionKeys = JSON.parse(fs.readFileSync(input));
   for (const actionKey of actionKeys) {
     await embedSingleActionKey(actionKey);
   }
