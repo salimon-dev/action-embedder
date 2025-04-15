@@ -27,7 +27,7 @@ export function loadTestData(loadVectors) {
 }
 
 async function embedData(record) {
-  console.log(`${chalk.blue("reading")}\t\t${record.id}\thiuj${record.name}`);
+  console.log(`${chalk.blue("reading")}\t\t${record.id}\t${record.name}`);
   const vectors = await embed(JSON.stringify(record.data));
   fs.appendFileSync(output, JSON.stringify({ ...record, vectors }) + "\n");
   console.log(`${chalk.blue("ready")}\t\t${record.id}\t${record.name}`);

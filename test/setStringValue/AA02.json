@@ -1,6 +1,7 @@
 [
   {
     "from": "user",
+    "type": "plain",
     "body": "my email is john@doe.com"
   }
 ]

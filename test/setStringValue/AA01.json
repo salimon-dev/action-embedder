@@ -1,6 +1,7 @@
 [
   {
     "from": "user",
+    "type": "plain",
     "body": "update my city of living to be berlin"
   }
 ]

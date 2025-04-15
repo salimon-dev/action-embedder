@@ -57,11 +57,14 @@ async function main() {
   const tests = loadTests();
   for (const test of tests) {
     const result = await validate(actions, test);
-    if (!result && test.name !== "none") {
-      console.log(chalk.red(`failure  \t${test.id}\t${test.name}`));
-      return;
+    if (!result) {
+      if (test.name === "none") {
+        console.log(chalk.green(`validated\t${test.id}\t${0.0}\t${test.name}`));
+      } else {
+        console.log(chalk.red(`failure  \t${test.id}\t${0.0}\t${test.name}`));
+      }
     } else {
-      console.log(chalk.green(`validated\t${test.id}\t${test.name}`));
+      console.log(chalk.green(`validated\t${test.id}\t${result.diff}\t${test.name}`));
     }
   }
   console.log(chalk.yellow("validation complete"));
